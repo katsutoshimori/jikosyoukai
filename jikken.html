@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>自己紹介サイト</title>
+    <style>
+        div.title{
+        background-color: skyblue;
+        height: 70px;
+        width: auto;
+        line-height: 80px;
+        font-size: 40px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        }
+        div.subtitle{
+        font-size: 20px;
+        color:darkred;
+        }
+        div.profile{
+        background-color: chartreuse;
+        height: 20px;
+        width: auto;
+        font-size: 20px;
+        color: black;
+        justify-content: center;
+        display: flex;
+        }
+        div.profilecontent{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/swiper.min.js" defer></script>    
+    <script src="js/script.js" defer></script>
+    <script language="JavaScript">
+
+        msgA = new Array(    "このたびは私の作成したページへ　ようこそおいでくださいました！！",
+                    "ここは私の自己紹介サイトです。",
+                    "どうぞよろしくお願いいたします。"    );
+        i = 0;
+        j = 0;
+        k = 0;
+        l = 0;
+        t1 = 100;
+        t2 = 3 * 1000;
+        msg = "";
+        function ms() {
+            if(msg.length > i || j != 0) {
+                if(++i > msgA[k].length) {
+                    i = msgA[k].length;
+                    if(++l >= t2 / t1 / 2) {
+                        if(++j > msgA[k].length) {
+                            if(++k >= msgA.length) {
+                                k = 0;
+                            }
+                            i = 0;
+                            j = 0;
+                            l = 0;
+                        }
+                    }
+                }
+                msg = msgA[k].substring(j, i);
+            }
+            else {
+                msg　+= "_";
+            }
+            document.form1.text1.value = msg;
+        }
+        function tm() {
+            tm = setInterval("ms()", t1);
+        }
+        </script>
+
+</head>
+<body bgcolor="slategray"></body>
+<body onload="tm()">
+
+    <form name="form1" action="" method="" style="text-align:center">
+        <input type="text" name="text1" readonly
+         style="width:100%;
+         color:#fff;
+         font-size:15px;
+         font-weight:bolder;
+         border:none;
+         background:#933">
+        </form>
+
+        <div class="title">自己紹介サイト</div>
+
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+
+        <div class="profile">profile</div>
+        <div class="profilecontent">
+            氏名　　　　森勝俊 <br>
+            生年月日　　1996年5月3日<br>
+            出身地　　　兵庫<br>
+            出身大学　　大阪電気通信大学</div>
+        <div class="profile">profile</div>
+
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+        <p>　</p>
+        <div class="subtitle">趣味</div>
+            <p>
+                創作活動、主に小説や自作ゲームを作る。
+                創作だけでなくゲームはやるのも好み、漫画も小説も好んで読む。    
+                他に、ネットサーフィンや映画鑑賞なども趣味のひとつ。
+            </p>
+
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+
+            <div class="subtitle">特技</div>
+            <p>
+                コミュニケーション能力。
+                転勤族ゆえに身についたと考えている。大抵の人と良好なコミュニケーションが取れる。
+            </p>
+        
+
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+            <p>　</p>
+
+            <p style="font-size:20px;">最後に、親の転勤により訪れた土地の一部を紹介する。</p>
+
+
+
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+            
+                    <div class="swiper-slide slide1">大阪</div>
+                    <div class="swiper-slide slide2">静岡</div>
+                    <div class="swiper-slide slide3">名古屋</div>
+                
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>

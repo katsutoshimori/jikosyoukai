@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.swiper-slide{
+    height: 350px;;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide.slide1{
+    background-image: url(../img/8623_origin.jpg);
+}
+.swiper-slide.slide2{
+    background-image: url(../img/pixta_19535867_S-600x426.jpg);
+}
+.swiper-slide.slide3{
+    background-image: url(../img/805E45ADDF5D4957AA0870AE034CB4A6_LL.jpg);
+}
+
+
+
+/* .swiper-slide img{
+    width: 100%;
+} */
